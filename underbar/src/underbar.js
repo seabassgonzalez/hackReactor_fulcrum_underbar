@@ -304,7 +304,12 @@
   //   }, {
   //     bla: "even more stuff"
   //   }); // obj1 now contains key1, key2, key3 and bla
+   
    _.extend = function(obj) {
+     // Use _.each to iterate through the array of arguments
+        // Use _.each to iterate through each argument object in the arguments array
+            // Pass each element as a property w/key to the object
+    // Return newly extended object
     _.each(arguments, function(argumentElement){
         _.each(argumentElement, function(argumentElement, key){
             obj[key] = argumentElement;
@@ -316,6 +321,19 @@
   // Like extend, but doesn't ever overwrite a key that already
   // exists in obj
   _.defaults = function(obj) {
+    // Use _.each to iterate through the array of arguments
+      // Use _.each to iterate through each argument object in the arguments array
+        // Check if property already exists on object
+          // If not pass element as property w/key to object
+    // Return object
+    _.each(arguments, function(argumentElement){
+      _.each(argumentElement, function(argumentElement, key){
+        if(obj[key] === undefined){
+          obj[key] = argumentElement;
+        }
+      });
+    });
+    return obj;
   };
 
 
