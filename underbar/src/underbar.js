@@ -276,6 +276,9 @@
     // TIP: There's a very clever way to re-use every() here.
     // return ! every taking collection and a function using its elements
       // return ! elements that pass iterator test
+    if(iterator === undefined){
+      iterator = _.identity;
+    }   
     return !(_.every(collection, function(givenCollectionElement){
       return !(iterator(givenCollectionElement));
     }));
