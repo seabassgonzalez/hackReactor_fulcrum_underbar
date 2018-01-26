@@ -1,2 +1,2 @@
-# bootcamp
-Work done at bootcamp 
+# Hack Reactor Fulcrum Prep Coursework
+Work done for Hack Reactor preparation 
